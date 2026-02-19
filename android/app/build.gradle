@@ -1,14 +1,7 @@
-plugins {
-    id "com.android.application"
-    id "kotlin-android"
-    id "dev.flutter.flutter-gradle-plugin"
-}
-
 android {
     namespace "com.example.abm_signal"
-    compileSdkVersion 33
+    compileSdkVersion 34  // 33 থেকে 34 করে দাও
     
-    // এটা অ্যাড করা লাগবে (Java 8 support এর জন্য)
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -21,12 +14,11 @@ android {
     defaultConfig {
         applicationId "com.example.abm_signal"
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34  // 33 থেকে 34 করে দাও
         versionCode 1
         versionName "1.0"
     }
 
-    // এটা অ্যাড করা লাগবে (Release build এর জন্য)
     buildTypes {
         release {
             signingConfig signingConfigs.debug
@@ -36,7 +28,6 @@ android {
     }
 }
 
-// এটা অ্যাড করা লাগবে (Flutter SDK লোকেট করার জন্য)
 flutter {
     source '../..'
 }
