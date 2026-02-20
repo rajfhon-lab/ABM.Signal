@@ -2,7 +2,7 @@ pluginManagement {
     def flutterSdkPath = {
         def properties = new Properties()
         file("local.properties").withInputStream { properties.load(it) }
-        def flutterSdkPathValue = properties.getProperty("flutter.sdk")  // ✅ নাম চেঞ্জ
+        def flutterSdkPathValue = properties.getProperty("flutter.sdk")
         assert flutterSdkPathValue != null, "flutter.sdk not set in local.properties"
         return flutterSdkPathValue
     }()
@@ -23,3 +23,4 @@ plugins {
 }
 
 include ":app"
+
